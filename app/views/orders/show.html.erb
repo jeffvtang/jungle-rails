@@ -6,6 +6,15 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <% @order.line_items.each do |i| %>
+    <div>
+      <%= image_tag i.product.image.tiny %>
+      <span><%= i.product.name %></span>
+      <div><%= i.product.description %></div>
+    </div>
+    <% end %>
+    <%= @order.total_cents * 0.01 %>
+    <%= current_user.email %>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
