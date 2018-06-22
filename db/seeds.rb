@@ -132,5 +132,22 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+product1 = Product.find_or_create_by name: 'Red Bookshelf'
+
+user1 = User.find_or_create_by! ({
+  first_name: "FirstName",
+  last_name: "LastName",
+  email: "jeff.tang@live.com",
+  password_digest:
+   "$2a$10$g1fNI6NQmBHJPd0mNVaOj.o3YW534kNLifAfJ64cLn3hV9A.H3JdW",
+})
+
+
+Review.create!({
+  description: 'Good bookshelf',
+  rating: 5,
+  user_id: 1,
+  product_id: 12,
+})
 
 puts "DONE!"
