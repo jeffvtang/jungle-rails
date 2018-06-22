@@ -4,6 +4,16 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
+
+    <% @order.line_items.each do |item| %>
+      <div>
+          <div><%= item.product.name %></div>
+      </div>
+      Total <%= @order.total_cents * 0.01 %>
+
+    <% end %>
+
+
   </body>
 </html>
 
