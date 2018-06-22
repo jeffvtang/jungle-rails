@@ -149,5 +149,17 @@ Review.create!({
   user_id: 1,
   product_id: 12,
 })
+Review.create!({
+  description: 'Bad bookshelf',
+  rating: 1,
+  user_id: 1,
+  product_id: 12,
+})
+Review.create!({
+  description: 'Okay bookshelf',
+  rating: 3,
+  user_id: 1,
+  product_id: 12,
+})
 
 puts "DONE!"
