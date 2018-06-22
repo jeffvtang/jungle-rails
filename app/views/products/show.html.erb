@@ -22,11 +22,27 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
-          <dt>Reviews</dt>
-          <dd><%= @product.reviews[0].description %> <%= @product.reviews[0].rating %>/5</dd>
+          <table>
+            <tr>
+              <th>Reviews</th>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td>Rating</td>
+            <tr>
+            <tr>
+              <td><%= @product.reviews[0].user_id %>:</td>
+              <td><%= @product.reviews[0].description %> <%= @product.reviews[0].rating %>/5</td>
+            </tr>
+            <tr>
+              <td><%= @product.reviews[0].user_id %>:</td>
+              <td><%= @product.reviews[0].description %> <%= @product.reviews[0].rating %>/5</td>
+            </tr>
+          </table>
         </dl>
       </div>
     </div>
+
 
   </article>
 
