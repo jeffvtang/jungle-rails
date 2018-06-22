@@ -132,9 +132,7 @@ cat3.products.create!({
   price: 2_483.75
 })
 
-product1 = Product.find_or_create_by name: 'Red Bookshelf'
-
-user1 = User.find_or_create_by! ({
+User.find_or_create_by! ({
   first_name: "FirstName",
   last_name: "LastName",
   email: "jeff.tang@live.com",
@@ -142,6 +140,13 @@ user1 = User.find_or_create_by! ({
    "$2a$10$g1fNI6NQmBHJPd0mNVaOj.o3YW534kNLifAfJ64cLn3hV9A.H3JdW",
 })
 
+User.find_or_create_by! ({
+  first_name: "Second",
+  last_name: "User",
+  email: "test@test.com",
+  password_digest:
+   "$2a$10$g1fNI6NQmBHJPd0mNVaOj.o3YW534kNLifAfJ64cLn3hV9A.H3JdW",
+})
 
 Review.create!({
   description: 'Good bookshelf',
@@ -152,7 +157,7 @@ Review.create!({
 Review.create!({
   description: 'Bad bookshelf',
   rating: 1,
-  user_id: 1,
+  user_id: 2,
   product_id: 12,
 })
 Review.create!({
