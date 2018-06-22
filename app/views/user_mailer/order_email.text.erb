@@ -1,4 +1,7 @@
-
+<% @order.line_items.each do |item| %>
+      <%= item.product.name %>
+<% end %>
+Total <%= @order.total_cents * 0.01 %>
 
 <%# Since you don't know their name information, it can just have a generic greeting
 The Order ID should be in the subject line
