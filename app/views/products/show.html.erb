@@ -30,14 +30,9 @@
               <td>Name</td>
               <td>Rating</td>
             <tr>
-            <tr>
-              <td><%= @product.reviews[0].user_id %>:</td>
-              <td><%= @product.reviews[0].description %> <%= @product.reviews[0].rating %>/5</td>
-            </tr>
-            <tr>
-              <td><%= @product.reviews[0].user_id %>:</td>
-              <td><%= @product.reviews[0].description %> <%= @product.reviews[0].rating %>/5</td>
-            </tr>
+            <% @product.reviews.each do |review| %>
+              <%= render 'review', review: review %>
+            <% end %>
           </table>
         </dl>
       </div>
