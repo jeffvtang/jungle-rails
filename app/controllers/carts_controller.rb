@@ -1,6 +1,10 @@
 class CartsController < ApplicationController
 
   def show
+    p cart.length
+    if cart.length == 0
+    redirect_to '/'
+    end
   end
 
   def add_item
