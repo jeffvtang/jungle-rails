@@ -1,9 +1,9 @@
 class CartsController < ApplicationController
 
   def show
-    p cart.length
     if cart.length == 0
-    redirect_to '/'
+      flash.notice = "Cart is currently empty"
+      redirect_to '/'
     end
   end
 
