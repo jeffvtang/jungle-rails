@@ -6,13 +6,13 @@ class ReviewsController < ApplicationController
   # end
 
   def create
-    @review = Product.reviews.new(review_params)
+    @review = Review.new(review_params)
   end
 
 
   private
 
-  def user_params
+  def review_params
     params.require(:review).permit(:description, :rating)
   end
 
