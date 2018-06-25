@@ -12,6 +12,13 @@ class ReviewsController < ApplicationController
     redirect_to :back
   end
 
+  def destroy
+    review_id = params[:review_id]
+    Review.destroy(review_id)
+
+    redirect_to :back
+  end
+  
   private
 
   def review_params
