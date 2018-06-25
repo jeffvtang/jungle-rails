@@ -30,7 +30,7 @@
               <td>Name</td>
               <td>Rating</td>
             <tr>
-            <% @product.reviews.each do |review| %>
+            <% @product.reviews.reverse.each do |review| %>
               <%= render 'review', review: review %>
             <% end %>
           </table>
