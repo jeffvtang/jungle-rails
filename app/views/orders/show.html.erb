@@ -9,7 +9,7 @@
     <% @order.line_items.each do |item| %>
       <%= render 'list', product: item.product %>
     <% end %>
-    <%= @order.total_cents * 0.01 %>
+    <%= number_to_currency(@order.total_cents * 0.01) %>
     <% if current_user %>
       <%= current_user.email%>
     <% end %>
