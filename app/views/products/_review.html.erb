@@ -1,4 +1,7 @@
             <tr>
               <td><%= review.user.first_name %> <%= review.user.last_name %></td>
               <td><%= review.description %> <%= review.rating %>/5</td>
+              <% if current_user.id === review.user_id %>
+              <td>Delete button here</td>
+              <% end %>
             </tr>
