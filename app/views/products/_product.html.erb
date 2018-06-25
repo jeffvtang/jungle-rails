@@ -4,7 +4,6 @@
       <%= image_tag product.image.thumb, alt: product.name %>
       <h4><%= product.name %></h4>
         <% if product.reviews.length > 0 %>
-        <% p '-----------------'%>
         <h5>Average Rating: <%= product.reviews.average(:rating).round(2) %> (<%=product.reviews.length%> reviews)</h5>
         <% else %>
         <h5>0 reviews</h5>

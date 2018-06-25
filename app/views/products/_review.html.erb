@@ -2,6 +2,7 @@
               <td><%= review.user.first_name %> <%= review.user.last_name %></td>
               <td><%= review.description %> <%= review.rating %>/5</td>
               <% if current_user.id === review.user_id %>
-              <td>Delete button here</td>
+              <td><%= link_to product_review_path(product_id: review.product_id, review_id: review.id), class: 'btn btn-xs btn-danger', method: :delete do %>Delete</td>
+              <% end %>
               <% end %>
             </tr>
